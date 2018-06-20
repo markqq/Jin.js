@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jin.js Example-1</title>
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
+	<script src="../../Jin.js" tyle="text/javascript"></script>
+	<script>
+	new Jin('default.js').ready( () => {
+		console.log('default is ready');
+	});
+	let card, date = new Date();
+	Jin.onReady( () => {
+		card = Jin.append('#cardContainer', 'standardCard', {
+			card_title: `现在是 ${date.getFullYear()} 年 ${date.getMonth() + 1} 月 ${date.getDate()} 日`,
+			card_content: `${date.getHours()} 时 ${date.getMinutes()} 分 ${date.getSeconds()} 秒`
+		});
+		setInterval( () => {
+			date = new Date();
+			card.card_content = `${date.getHours()} 时 ${date.getMinutes()} 分 ${date.getSeconds()} 秒`;
+		},1000);
+	});
+	</script>
+</head>
+<body>
+	<div id="cardContainer"></div>
+</body>
+</html>
