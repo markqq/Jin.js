@@ -34,8 +34,8 @@ A components-declared file (usually suffixed .js) contains several declarations 
 	<h1 style="font-size: 18px;
              color: #0e0e0e;
              margin: 0;">
-    {{card_title}}
-  </h1>
+    	{{card_title}}
+  	</h1>
 	<p style="color: #808080;
             fonnt-size: 16px;
             margin: 10px 0 0 0;
