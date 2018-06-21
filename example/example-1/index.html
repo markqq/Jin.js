@@ -8,8 +8,8 @@
 	let card, date = new Date();
 	new Jin('default.js').ready( () => {
 		card = Jin.append('#cardContainer', 'standardCard', {
-				card_title: `现在是 ${date.getFullYear()} 年 ${date.getMonth() + 1} 月 ${date.getDate()} 日`,
-				card_content: `${date.getHours()} 时 ${date.getMinutes()} 分 ${date.getSeconds()} 秒`
+			card_title: `现在是 ${date.getFullYear()} 年 ${date.getMonth() + 1} 月 ${date.getDate()} 日`,
+			card_content: `${date.getHours()} 时 ${date.getMinutes()} 分 ${date.getSeconds()} 秒`
 		});
 		setInterval( () => {
 			date = new Date();
